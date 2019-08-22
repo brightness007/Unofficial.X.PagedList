@@ -3,19 +3,20 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.1;netstandard2.0;net45;net461</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>Copyright Troy Goode, Ernado © 2018</Authors>
+    <Authors>Copyright Troy Goode, Ernado, Brightness © 2019</Authors>
     <Company>.NET Core Ukrainian User Group</Company>
-    <Version>7.6.0</Version>
+    <Version>7.6.1</Version>
     <AssemblyVersion>7.6.0</AssemblyVersion>
     <FileVersion>7.6.0</FileVersion>
-    <PackageProjectUrl>https://github.com/dncuug/X.PagedList</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/dncuug/X.PagedList/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/brightness007/Unofficial.X.PagedList</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/brightness007/Unofficial.X.PagedList/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/dncuug/X.PagedList.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/brightness007/Unofficial.X.PagedList.git</RepositoryUrl>
     <Description>Library for easily paging through any IEnumerable/IQueryable in .NET and .NET Core</Description>
     <PackageIconUrl>https://ru.gravatar.com/userimage/8071071/f2dc08ee7e4016451f64a7ae9cffd110.png?size=200</PackageIconUrl>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>x_paged_list.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Unofficial.X.PagedList</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

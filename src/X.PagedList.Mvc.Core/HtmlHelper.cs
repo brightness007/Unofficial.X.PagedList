@@ -70,7 +70,8 @@ namespace X.PagedList.Mvc.Core
             if (list.IsFirstPage)
                 return WrapInListItem(first, options, "PagedList-skipToFirst", "disabled");
 
-            first.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            first.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(first, options, "PagedList-skipToFirst");
         }
 
@@ -87,7 +88,8 @@ namespace X.PagedList.Mvc.Core
             if (!list.HasPreviousPage)
                 return WrapInListItem(previous, options, options.PreviousElementClass, "disabled");
 
-            previous.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            previous.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(previous, options, options.PreviousElementClass);
         }
 
@@ -105,7 +107,8 @@ namespace X.PagedList.Mvc.Core
             if (i == list.PageNumber)
                 return WrapInListItem(page, options, options.ActiveLiElementClass);
 
-            page.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            page.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
 
             return WrapInListItem(page, options);
         }
@@ -123,7 +126,8 @@ namespace X.PagedList.Mvc.Core
             if (!list.HasNextPage)
                 return WrapInListItem(next, options, options.NextElementClass, "disabled");
 
-            next.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            next.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(next, options, options.NextElementClass);
         }
 
@@ -139,7 +143,8 @@ namespace X.PagedList.Mvc.Core
             if (list.IsLastPage)
                 return WrapInListItem(last, options, "PagedList-skipToLast", "disabled");
 
-            last.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            last.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(last, options, "PagedList-skipToLast");
         }
 

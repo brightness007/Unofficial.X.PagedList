@@ -77,7 +77,8 @@ namespace X.PagedList.Mvc
                 return WrapInListItem(first, options, "PagedList-skipToFirst", "disabled");
             }
 
-            first.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            first.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(first, options, "PagedList-skipToFirst");
         }
 
@@ -98,7 +99,8 @@ namespace X.PagedList.Mvc
                 return WrapInListItem(previous, options, options.PreviousElementClass, "disabled");
             }
 
-            previous.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            previous.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
 
             return WrapInListItem(previous, options, options.PreviousElementClass);
         }
@@ -121,7 +123,8 @@ namespace X.PagedList.Mvc
                 return WrapInListItem(page, options, options.ActiveLiElementClass);
             }
 
-            page.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            page.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
 
             return WrapInListItem(page, options);
         }
@@ -143,7 +146,8 @@ namespace X.PagedList.Mvc
                 return WrapInListItem(next, options, options.NextElementClass, "disabled");
             }
 
-            next.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            next.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(next, options, options.NextElementClass);
         }
 
@@ -163,7 +167,8 @@ namespace X.PagedList.Mvc
                 return WrapInListItem(last, options, "PagedList-skipToLast", "disabled");
             }
 
-            last.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            last.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(last, options, "PagedList-skipToLast");
         }
 
@@ -363,7 +368,8 @@ namespace X.PagedList.Mvc
             if (!list.HasPreviousPage)
                 return WrapInListItem(previous, options, options.EllipsesElementClass, "disabled");
 
-            previous.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            previous.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(previous, options, options.EllipsesElementClass);
         }
 
@@ -383,7 +389,8 @@ namespace X.PagedList.Mvc
             if (!list.HasNextPage)
                 return WrapInListItem(next, options, options.EllipsesElementClass, "disabled");
 
-            next.Attributes["href"] = generatePageUrl(targetPageNumber);
+            string linkTagName = options?.LinkTagName ?? "href";
+            next.Attributes[linkTagName] = generatePageUrl(targetPageNumber);
             return WrapInListItem(next, options, options.EllipsesElementClass);
         }
 

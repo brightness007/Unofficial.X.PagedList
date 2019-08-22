@@ -48,6 +48,11 @@ namespace X.PagedList.Mvc.Common
         /// </summary>
         public HtmlEncoder HtmlEncoder { get; set; }
 
+        /// <summary>
+        /// Gets or sets the tag name of link (the default value is "href").
+        /// </summary>
+        public string LinkTagName { get; set; } = "href";
+
         ///<summary>
         /// CSS Classes to append to the &lt;div&gt; element that wraps the paging control.
         ///</summary>
